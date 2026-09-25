@@ -25,7 +25,7 @@ class NvmeRecoveryDocumentationTest(unittest.TestCase):
             self.assertIn(run_id, self.readme)
         self.assertNotIn('| NVMe boot-driver recovery | Windows | — | Not available yet |', self.readme)
         self.assertIn('MicrosoftWindowsServer:WindowsServer:2022-datacenter-g2:latest', self.readme)
-        self.assertIn('validated on Windows Server 2022 Datacenter Gen2', self.history)
+        self.assertIn('Narrowing the documented NVMe boot-driver recovery support', self.history)
         self.assertIn('GEN1_TO_GEN2_CONVERSION_REQUIRED', self.readme)
         self.assertIn('Azure Trusted Launch upgrade', self.readme)
         self.assertIn('not performed by a repair-library run ID', self.readme)

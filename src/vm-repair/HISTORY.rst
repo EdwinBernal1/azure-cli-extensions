@@ -2,9 +2,13 @@
 Release History
 ===============
 
+2.4.6
+++++++
+Narrowing the documented NVMe boot-driver recovery support to Windows Server 2022 Datacenter Gen2, the image validated end to end. Other Windows Generation 2 images remain outside the documented support matrix until they are validated.
+
 2.4.5
 ++++++
-Documenting the NVMe boot-driver recovery validated on Windows Server 2022 Datacenter Gen2 and now available through the ``win-enable-nvme-boot-driver`` run id. The README and command help show the read-only report, explicit repair, and rollback flow, including the detector signatures that require the operator to stop instead of modifying the offline disk. Linux recovery and Generation 1 conversion remain unavailable.
+Documenting the Windows Generation 2 NVMe boot-driver recovery now available through the ``win-enable-nvme-boot-driver`` run id. The README and command help show the read-only report, explicit repair, and rollback flow, including the detector signatures that require the operator to stop instead of modifying the offline disk. Linux recovery and Generation 1 conversion remain unavailable.
 
 2.4.4
 ++++++
