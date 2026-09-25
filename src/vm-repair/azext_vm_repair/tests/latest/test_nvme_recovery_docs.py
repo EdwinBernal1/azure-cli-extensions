@@ -12,6 +12,8 @@ class NvmeRecoveryDocumentationTest(unittest.TestCase):
         extension_root = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..', '..'))
         with open(os.path.join(extension_root, 'README.md'), encoding='utf-8') as readme_file:
             self.readme = readme_file.read()
+        with open(os.path.join(extension_root, 'HISTORY.rst'), encoding='utf-8') as history_file:
+            self.history = history_file.read()
         with open(os.path.join(extension_root, 'azext_vm_repair', '_help.py'), encoding='utf-8') as help_file:
             self.help_text = help_file.read()
 
@@ -22,6 +24,8 @@ class NvmeRecoveryDocumentationTest(unittest.TestCase):
                 'win-enable-nvme-boot-driver'):
             self.assertIn(run_id, self.readme)
         self.assertNotIn('| NVMe boot-driver recovery | Windows | — | Not available yet |', self.readme)
+        self.assertIn('MicrosoftWindowsServer:WindowsServer:2022-datacenter-g2:latest', self.readme)
+        self.assertIn('validated on Windows Server 2022 Datacenter Gen2', self.history)
         self.assertIn('GEN1_TO_GEN2_CONVERSION_REQUIRED', self.readme)
         self.assertIn('Azure Trusted Launch upgrade', self.readme)
         self.assertIn('not performed by a repair-library run ID', self.readme)

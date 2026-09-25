@@ -36,7 +36,7 @@ The table below lists only what is available today. Combinations that are not li
 |---|---|---|---|
 | NVMe boot readiness detection (read-only) | Windows | `win-detect-nvme-readiness` | Available |
 | NVMe boot readiness detection (read-only) | Linux | `linux-detect-nvme-readiness` | Available |
-| NVMe boot-driver recovery | Windows | `win-enable-nvme-boot-driver` | Available for Generation 2 offline recovery |
+| NVMe boot-driver recovery | Windows Server 2022 Datacenter Gen2 | `win-enable-nvme-boot-driver` | Validated with `MicrosoftWindowsServer:WindowsServer:2022-datacenter-g2:latest` |
 | NVMe boot-driver recovery | Linux | — | Not available yet |
 
 The detectors and Windows recovery script run against the source VM's OS disk attached to a repair VM,
